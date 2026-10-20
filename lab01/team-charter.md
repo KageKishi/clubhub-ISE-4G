@@ -42,3 +42,4 @@ The Product Owner stays the same all semester.
 <!-- each member adds "- Name, date" in their own commit (Task 2) -->
 1. Lor Hengleap "LorHengleap 10/20/2026"
 2. Song Vansak "SongVansak 10/20/2026"
+3. Sreu Visal "SreuVisal 10/20/2026"
