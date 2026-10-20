@@ -15,13 +15,13 @@ Unlike a normal school app, our product provides many services for users such as
 
 ## Scope
 
-* Built in C++ this semester:
+- Built in C++ this semester:
   * Core backend service logic or modular performance components (if required by course specifications).
   * Secure credential hashing and token-based session management routines.
-* Modelled only (web and mobile):
+- Modelled only (web and mobile):
   * Interactive UI/UX wireframes for student dashboards, club directory pages, and mobile attendance check-in interfaces.
   * Responsive screen designs for the course material repository (slides, labs, and quizzes).
-* Out of scope:
+- Out of scope:
   * Automated facial recognition or biometric attendance verification.
   * Deep integration with external university registrar or official ERP/SIS databases.
   * Native mobile app store deployment (restricting mobile access to responsive web interfaces).
