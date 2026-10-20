@@ -1,9 +1,7 @@
-#include "clubhub/banner.hpp"
-
 #include <iostream>
 
 int main()
 {
-    std::cout << clubhub::banner();
+    std::cout << "ClubHub\n";
     return 0;
 }
