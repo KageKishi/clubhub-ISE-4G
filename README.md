@@ -35,6 +35,6 @@ Inputs reused from earlier labs: none (first lab)
 
 ## Change Log
 
-| Date       | Version | Summary                                              | Commit             |
-| ---------- | ------- | ---------------------------------------------------- | ------------------ |
-| 2026-10-20 | v0.1.0  | Created the initial Club Hub C++20 and CMake project | `YOUR_COMMIT_HASH` |
+| Date       | Version | Summary                                              | Commit                                                                                       |
+| ---------- | ------- | ---------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| 2026-10-20 | v0.1.0  | Created the initial Club Hub C++20 and CMake project | `Record Lab-01 Changes , LorHengleap liep.lor01@gmail.com , SreuVisal sreuvisal95@gmail.com` |
