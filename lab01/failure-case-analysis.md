@@ -35,12 +35,19 @@ flowchart TD
 | Independent hardware interlocks were reduced | Organisational | Accidental   | An independent safety layer could have stopped the unsafe radiation beam.   |
 
 ## 5. Practices that would have prevented or limited it
-| Root cause | Practice | Chapter |
-| ---------- | -------- | ------- |
+
+| Root cause                                   | Type           | Difficulty   | Justification                                                               |
+| -------------------------------------------- | -------------- | ------------ | --------------------------------------------------------------------------- |
+| Unsafe shared data and timing behavior       | Technical      | Complexity   | Several software tasks interacted in ways that were difficult to predict.   |
+| Insufficient testing of rapid operator input | Process        | Invisibility | The defect appeared only during a particular sequence and timing of inputs. |
+| Independent hardware interlocks were reduced | Organisational | Accidental   | An independent safety layer could have stopped the unsafe radiation beam.   |
 
 ## 6. Lessons for ITC Club Hub
-1.
-2.
+
+1. The CSV importer will reject capacity unless the value is a whole number
+   from 1 to 500 and will display the invalid row and value.
+2. Every change must pass automated tests and receive approval from another
+   team member before it can be merged into main.
 
 ## 7. Sources
 1. <author or organisation, title, year, URL> (primary)
