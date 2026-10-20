@@ -1,5 +1,5 @@
 
-# Decision log · <team name> (v0.1, 2026-__-__)
+# Decision log · clubhub-ISE-4G (v0.1, 2026-__-__)
 
 | #   | Date       | Decision            | Decided by   | Alternatives considered |
 | --- | ---------- | ------------------- | ------------ | ----------------------- |
