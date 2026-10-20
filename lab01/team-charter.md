@@ -40,4 +40,4 @@ The Product Owner stays the same all semester.
 ## Agreed by
 
 <!-- each member adds "- Name, date" in their own commit (Task 2) -->
-
+1. Lor Hengleap "LorHengleap 10/20/2026"
