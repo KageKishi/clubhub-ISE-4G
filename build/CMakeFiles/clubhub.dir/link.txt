@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\clubhub.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\clubhub.dir/objects.a @CMakeFiles\clubhub.dir\objects1.rsp
-C:\msys64\mingw64\bin\c++.exe -Wl,--whole-archive CMakeFiles\clubhub.dir/objects.a -Wl,--no-whole-archive -o clubhub.exe -Wl,--out-implib,libclubhub.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\clubhub.dir\linkLibs.rsp

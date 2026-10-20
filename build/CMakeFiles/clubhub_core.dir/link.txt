@@ -1,2 +1,0 @@
-C:\msys64\mingw64\bin\ar.exe qc libclubhub_core.a CMakeFiles/clubhub_core.dir/src/banner.cpp.obj
-C:\msys64\mingw64\bin\ranlib.exe libclubhub_core.a
