@@ -114,3 +114,5 @@ dist
 #Build
 build/
 
+# .vscode
+.vscode
