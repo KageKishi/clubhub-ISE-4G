@@ -60,4 +60,18 @@ flowchart TD
    team member before it can be merged into main.
 
 ## 7. Sources
-1. <author or organisation, title, year, URL> (primary)
+
+1. Author/Organization: U.S. Food and Drug Administration  
+   Title: “510(k) Premarket Notification: Therac 25 Linear Accelerator (K837152)”  
+   Year: 1983  
+   URL: View the FDA Therac-25 record (https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpmn/pmn.cfm?ID=k837152)
+
+2. Authors: Nancy G. Leveson and Clark S. Turner  
+   Title: “An Investigation of the Therac-25 Accidents”  
+   Year: 1993  
+   URL: Read the Therac-25 investigation (https://web.mit.edu/6.033/2004/wwwdocs/papers/Therac_1.html)
+
+3. Author: Charles Huff  
+   Title: “References for Therac-25 Case”  
+   Year: 2003  
+   URL: View the Therac-25 case references (https://onlineethics.virginia.edu/cases/therac-25/references-therac-25-case)
