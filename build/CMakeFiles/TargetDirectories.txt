@@ -1,0 +1,4 @@
+D:/Github/ISE/build/CMakeFiles/clubhub_core.dir
+D:/Github/ISE/build/CMakeFiles/clubhub.dir
+D:/Github/ISE/build/CMakeFiles/edit_cache.dir
+D:/Github/ISE/build/CMakeFiles/rebuild_cache.dir
