@@ -1,0 +1,4 @@
+C:/School/ISE-4G/build/CMakeFiles/clubhub_core.dir
+C:/School/ISE-4G/build/CMakeFiles/clubhub.dir
+C:/School/ISE-4G/build/CMakeFiles/edit_cache.dir
+C:/School/ISE-4G/build/CMakeFiles/rebuild_cache.dir
