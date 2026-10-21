@@ -51,4 +51,4 @@ For the next four weeks, our team will be on guard and prepared with the rapid r
 - Song Vansak (Scrum Master): I will organize the short team check-in, focusing more on communication, progress, GitHub issues.
 - Lor Hengleap (Developer 1): I expect to find more bugs than planned especially when integrating , so i will test each feature before adding to the system.
 - Sreu Visal (Developer 2): I will test my code regularly, read error messages carefully, and fix problems as soon as they appear.
-- Keo Vimeanrathbosba (Product Owner): I will be checking in with the client to make sure we can give them what they ask for and what they really want and work well with my team.
+- Keo Vimeanrathbosba (Product Owner): I will be checking in with the client to make sure we can give them what they ask for and what they really want. Additionally, I will work well with my team.

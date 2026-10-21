@@ -2,12 +2,12 @@
 
 ## Members and roles
 
-| Member              | GitHub       | Role (Sprint 1) | Shared hat |
-| ------------------- | ------------ | --------------- | ---------- |
-| Keo Vimeanrathbosba | @            | Product Owner   |            |
-| Song Vansak         | songvansak19 | Scrum Master    |            |
-| Lor Hengleap        | KageKishi    | Developer       |            |
-| Sreu Visal          | visal-rg     | Developer       |            |
+| Member              | GitHub              | Role (Sprint 1) | Shared hat |
+| ------------------- | ------------------- | --------------- | ---------- |
+| Keo Vimeanrathbosba | @keovimeanrathbosba | Product Owner   |            |
+| Song Vansak         | songvansak19        | Scrum Master    |            |
+| Lor Hengleap        | KageKishi           | Developer       |            |
+| Sreu Visal          | visal-rg            | Developer       |            |
 
 Scrum Master rotation: Sprint 1 = Song Vansak, Sprint 2 = Lor Hengleap.
 The Product Owner stays the same all semester.
