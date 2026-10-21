@@ -1,3 +1,12 @@
+#=============ACTUAL LAB01============
+#Build
+build/
+
+# .vscode
+.vscode
+#=====================================
+
+#======== GITHUB BUNS IGNORED BUILT IN=============
 # Logs
 logs
 *.log
@@ -111,9 +120,4 @@ dist
 
 # TernJS port file
 .tern-port
-
-#Build
-build/
-
-# .vscode
-.vscode
+#==========================================
