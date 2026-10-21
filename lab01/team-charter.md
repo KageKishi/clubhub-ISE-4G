@@ -1,13 +1,13 @@
-# Team charter · <team name> (v1.0, 2026-**-**)
+# Team charter · clubhub-ISE-4G (v1.0, 2026-**-**)
 
 ## Members and roles
 
-| Member              | GitHub | Role (Sprint 1) | Shared hat |
-| ------------------- | ------ | --------------- | ---------- |
-| Keo Vimeanrathbosba | @      | Product Owner   |            |
-| Song Vansak         | @      | Scrum Master    |            |
-| Lor Hengleap        | @      | Developer       |            |
-| Sreu Visal          | @      | Developer       |            |
+| Member              | GitHub    | Role (Sprint 1) | Shared hat |
+| ------------------- | --------- | --------------- | ---------- |
+| Keo Vimeanrathbosba | @         | Product Owner   |            |
+| Song Vansak         | @         | Scrum Master    |            |
+| Lor Hengleap        | KageKishi | Developer       |            |
+| Sreu Visal          | @         | Developer       |            |
 
 Scrum Master rotation: Sprint 1 = Song Vansak, Sprint 2 = Lor Hengleap.
 The Product Owner stays the same all semester.
