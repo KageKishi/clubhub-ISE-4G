@@ -44,4 +44,5 @@ The essential difficulty our team is most likely to encounter first is changeabi
 
 During the next four weeks, our team will reduce this risk by recording every requirement in GitHub Issues and asking the Product Owner to confirm changes with the client. Each accepted change will include clear acceptance criteria and identify the files that may be affected. We will also keep the program modular by separating input validation, data storage, and output formatting. This will allow one part of the program to change without unnecessarily rewriting other parts. Before merging a changed requirement into main, another member will review the implementation and check that the automated tests still pass.
 
-- (signed) ...
+# Signed Members Statement
+- Song Vansak (Scrum Master): I will organize the short team check-in, focusing more on communication, progress, GitHub issues.
