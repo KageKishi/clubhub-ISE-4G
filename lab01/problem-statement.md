@@ -13,6 +13,8 @@ Unlike a normal school app, our product provides many services for users such as
 
 ## Today's workaround
 
+Students register through chat groups, while organizers manually maintain participant lists in spreadsheets or messages.
+
 ## Scope
 
 - Built in C++ this semester:
