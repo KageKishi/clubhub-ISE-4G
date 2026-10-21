@@ -7,7 +7,7 @@
 | Keo Vimeanrathbosba | @            | Product Owner   |            |
 | Song Vansak         | songvansak19 | Scrum Master    |            |
 | Lor Hengleap        | KageKishi    | Developer       |            |
-| Sreu Visal          | @            | Developer       |            |
+| Sreu Visal          | visal-rg     | Developer       |            |
 
 Scrum Master rotation: Sprint 1 = Song Vansak, Sprint 2 = Lor Hengleap.
 The Product Owner stays the same all semester.
