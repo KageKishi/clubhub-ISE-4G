@@ -1,4 +1,4 @@
-# Failure risks · ITC Club Hub (v0.1, 2026-**-**)
+# Failure risks · ITC Club Hub (v0.1, 10/21/2026)
 
 | #  |                     How the project could fail               | Chapter 01 topic | Early warning sign | First countermeasure | Owner |
 |----|---------------------------------------------------------------------------------------------------------------------------------|------------------|--------------------|----------------------|-------|

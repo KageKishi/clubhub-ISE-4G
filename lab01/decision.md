@@ -1,5 +1,5 @@
 
-# Decision log · clubhub-ISE-4G (v0.1, 2026-__-__)
+# Decision log · clubhub-ISE-4G (v0.1, 10/21/2026)
 
 | #   | Date       | Decision            | Decided by   | Alternatives considered |
 | --- | ---------- | ------------------- | ------------ | ----------------------- |

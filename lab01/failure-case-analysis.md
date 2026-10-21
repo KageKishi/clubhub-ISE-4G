@@ -1,4 +1,4 @@
-# Failure case analysis ·Therac-25 (v1.0, 2026-__-__)
+# Failure case analysis ·Therac-25 (v1.0, 10/21/2026)
 
 | Authors             | Section |
 | ------------------- | ------- |
@@ -47,22 +47,20 @@ flowchart TD
 | -------------------------------------------- | -------------- | ------------ | --------------------------------------------------------------------------- |
 | Unsafe shared data and timing behavior       | Technical      | Complexity   | Several software tasks interacted in ways that were difficult to predict.   |
 | Insufficient testing of rapid operator input | Process        | Invisibility | The defect appeared only during a particular sequence and timing of inputs. |
-| Independent hardware interlocks were reduced | Organisational | Accidental   | An independent safety layer could have stopped the unsafe radiation beam.   |
+| Independent hardware interlocks were reduced | Organisational | Invisibility | An independent safety layer could have stopped the unsafe radiation beam.   |
 
 ## 5. Practices that would have prevented or limited it
 
-| Root cause                                   | Type           | Difficulty   | Justification                                                               |
-| -------------------------------------------- | -------------- | ------------ | --------------------------------------------------------------------------- |
-| Unsafe shared data and timing behavior       | Technical      | Complexity   | Several software tasks interacted in ways that were difficult to predict.   |
-| Insufficient testing of rapid operator input | Process        | Invisibility | The defect appeared only during a particular sequence and timing of inputs. |
-| Independent hardware interlocks were reduced | Organisational | Accidental   | An independent safety layer could have stopped the unsafe radiation beam.   |
+| Root cause                              | Practice that could prevent or limit it                               | Course chapter/topic |
+| --------------------------------------- | --------------------------------------------------------------------- | -------------------- |
+| Shared data and timing problems         | Define safe state transitions; test rapid inputs and timing sequences | Chapter 01           |
+| Inadequate testing of rapid inputs      | Add regression tests for fast edits, timeouts, and retries            | Chapter 01           |
+| Operators couldn’t see the unsafe state | Show the actual failure clearly and block unsafe continuation         | Chapter 01           |
 
 ## 6. Lessons for ITC Club Hub
 
-1. The CSV importer will reject capacity unless the value is a whole number
-   from 1 to 500 and will display the invalid row and value.
-2. Every change must pass automated tests and receive approval from another
-   team member before it can be merged into main.
+1. Don’t record attendance when a student’s session has expired; show a clear error instead.  
+2. Test rapid retries, timeouts, and repeated check-ins so they can’t create an incorrect attendance record
 
 ## 7. Sources
 

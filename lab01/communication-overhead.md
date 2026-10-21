@@ -1,16 +1,16 @@
-# Communication overhead · clubhub-ITC-4G (v1.0, 2026--)
+# Communication overhead · clubhub-ITC-4G (v1.0, 10/21/2026)
 
 ## Paths
 
-| Model                 | People n | Paths n(n-1)/2    | Minutes/week | Hours/week |
-| --------------------- | -------- | ----------------- | ------------ | ---------- |
-| (a) everyone + client | 6        | 6(6-1)/2=15       | 15x10 = 150  | 2.5        |
-| (b) client via PO     | 6        | 5(5-1)/2 + 1 = 11 | 11x10 = 110  | 1.83       |
+| Model                 | People n | Paths n(n-1)/2   | Minutes/week | Hours/week |
+| --------------------- | -------- | ---------------- | ------------ | ---------- |
+| (a) everyone + client | 5        | 5(5-1)/2=10      | 10x10 = 100  | 1.666      |
+| (b) client via PO     | 4        | 4(4-1)/2 + 1 = 7 | 7x10 = 70    | 1.1666     |
 
 Assumption: 10 minutes per path per week, because each communication path requires time to exchange updates, clarify requirements, and resolve misunderstandings.
-Team capacity: 5 members × 2 h = 10 h/week. 
--> model (a) costs 2.5 / 10 x 100 = 25% of weekly team capacity.
-→ model (b) costs 1.83 / 10 × 100 = 18.3% of weekly team capacity.
+Team capacity: 4 members × 2 h = 8 h/week. 
+-> model (a) costs 1.66 / 8 x 100 = 20.83% of weekly team capacity.
+→ model (b) costs 1.166 / 8 × 100 = 14.53% of weekly team capacity.
 
 ## Our paths (model b)
 ```mermaid
@@ -26,8 +26,8 @@ flowchart LR
 ## Two practices
 
 1. 10-minute stand-up, three times a week. Each member briefly reports progress, blockers, and their next task. Bosba collects client-related questions and shares the answers with the team. This replaces scattered status updates with three short meetings, costing approximately 0.5 h/week in scheduled meeting time. We will keep updates brief and move detailed discussions to GitHub Issues.
-2. 
-3. GitHub Issues as the single source of truth. We record requirements, decisions, bugs, and task owners in GitHub Issues instead of repeatedly explaining the same information in private messages. This reduces the assumed cost per path from 10 to 6 minutes per week. Model (b) then costs 11 × 6 = 66 minutes, or 1.1 h/week. This saves approximately 0.73 h/week compared with the original model.
+
+2. GitHub Issues as the single source of truth. We record requirements, decisions, bugs, and task owners in GitHub Issues instead of repeatedly explaining the same information in private messages. This reduces the assumed cost per path from 10 to 6 minutes per week. Model (b) then costs 7 × 6 = 42 minutes, or 0.7 h/week. This saves approximately 0.47 h/week compared with the original model.
 
 ## A sixth member in week 11
 
@@ -35,7 +35,7 @@ With six team members and the client communicating only through the PO:
 
 Path n(n-1)/2 = 6(6-1)/2 + 1 = 16
 
-The overhead rises from 11 to 16 paths, an increase of 5/11 × 100 ≈ 45.5%. At 10 minutes per path, that is 160 minutes or 2.67 h/week.
+The overhead rises from 7 to 16 paths, an increase of 16-7/7 × 100 ≈ 128.6%. At 10 minutes per path, that is 160 minutes or 2.67 h/week.
 
 Decision: We would not accept the sixth member in week 11 unless the additional person has a clearly defined role that provides enough benefit to justify the onboarding and coordination costs, consistent with Brooks's law.
 

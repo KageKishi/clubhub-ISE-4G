@@ -1,4 +1,4 @@
-# Team charter · clubhub-ISE-4G (v1.0, 2026-**-**)
+# Team charter · clubhub-ISE-4G (v1.0, 10/21/2026)
 
 ## Members and roles
 
@@ -14,7 +14,7 @@ The Product Owner stays the same all semester.
 
 ## Working agreements
 
-1. TODO (checkable: a time, a number or an observable action).
+1. Each member updates their assigned GitHub Issue with progress, blockers, and next steps before each scheduled stand-up.
 2. Every pull request is reviewed by one other member within 24 h (Mon-Fri); the author merges after approval. (Lor hengleap).
 3. Work/Focus on your own branch instead of the main branch.
 4. Have a meet up/meeting at least once every week.
@@ -26,7 +26,7 @@ The Product Owner stays the same all semester.
 | Purpose    | Channel             | Expected response    |
 | ---------- | ------------------- | -------------------- |
 | Chat       | Telegram Group Chat | 1-2 hour             |
-| Work items | GitHub Issues       | n/a                  |
+| Work items | GitHub Issues       | within 12h           |
 | Files      | this repository     | within a day         |
 | Meetings   | IRL , VC            | at least once a week |
 

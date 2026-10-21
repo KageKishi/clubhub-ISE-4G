@@ -1,4 +1,4 @@
-# Problem statement · ITC Club Hub (v0.1, 2026-**-**)
+# Problem statement · ITC Club Hub (v0.1, 10/21/2026)
 
 ## Problem
 
