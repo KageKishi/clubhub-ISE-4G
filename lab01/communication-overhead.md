@@ -46,3 +46,4 @@ During the next four weeks, our team will reduce this risk by recording every re
 
 # Signed Members Statement
 - Song Vansak (Scrum Master): I will organize the short team check-in, focusing more on communication, progress, GitHub issues.
+- Lor Hengleap (Developer 1): I expect to find more bugs than planned especially when integrating , so i will test each feature before adding to the system.

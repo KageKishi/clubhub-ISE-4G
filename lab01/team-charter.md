@@ -34,12 +34,11 @@ The Product Owner stays the same all semester.
 
 - Product questions:product -> PO decides after hearing everyone;
 - Technical questions:consensus within 24 h, else majority vote;
-- Deadlock (no agreement after \_\_ hours):ask the Professor at the next lab session.
+- Deadlock (no agreement after 24-48 hours):ask the Professor at the next lab session.
 - Where decisions are recorded: lab01/decisions.md
 
 ## Agreed by
 
-<!-- each member adds "- Name, date" in their own commit (Task 2) -->
 1. Lor Hengleap "LorHengleap 10/20/2026"
 2. Song Vansak "SongVansak 10/20/2026"
 3. Sreu Visal "SreuVisal 10/20/2026"
