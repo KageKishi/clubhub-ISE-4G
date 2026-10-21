@@ -35,7 +35,7 @@ With six team members and the client communicating only through the PO:
 
 Path n(n-1)/2 = 6(6-1)/2 + 1 = 16
 
-The overhead rises from 7 to 16 paths, an increase of 16-7/7 × 100 ≈ 128.6%. At 10 minutes per path, that is 160 minutes or 2.67 h/week.
+The overhead rises from 7 to 16 paths, an increase of (16-7)/7 × 100 ≈ 128.6%. At 10 minutes per path, that is 160 minutes or 2.67 h/week.
 
 Decision: We would not accept the sixth member in week 11 unless the additional person has a clearly defined role that provides enough benefit to justify the onboarding and coordination costs, consistent with Brooks's law.
 

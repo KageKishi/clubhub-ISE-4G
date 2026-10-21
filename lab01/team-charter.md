@@ -35,7 +35,7 @@ The Product Owner stays the same all semester.
 - Product questions:product -> PO decides after hearing everyone;
 - Technical questions:consensus within 24 h, else majority vote;
 - Deadlock (no agreement after 24-48 hours):ask the Professor at the next lab session.
-- Where decisions are recorded: lab01/decisions.md
+- Where decisions are recorded: lab01/decision.md
 
 ## Agreed by
 
