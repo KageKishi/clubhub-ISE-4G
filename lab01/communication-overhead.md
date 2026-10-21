@@ -10,7 +10,7 @@
 Assumption: 10 minutes per path per week, because each communication path requires time to exchange updates, clarify requirements, and resolve misunderstandings.
 Team capacity: 4 members × 2 h = 8 h/week. 
 -> model (a) costs 1.66 / 8 x 100 = 20.83% of weekly team capacity.
-→ model (b) costs 1.166 / 8 × 100 = 14.53% of weekly team capacity.
+→ model (b) costs 1.166 / 8 × 100 = 14.58% of weekly team capacity.
 
 ## Our paths (model b)
 ```mermaid

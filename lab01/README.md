@@ -1,4 +1,4 @@
-# Lab 01 Record
+# Lab 01 Record · clubhub-ISE-4G (v0.1.0, 2026-10-20)
 
 ## Files Produced
 
