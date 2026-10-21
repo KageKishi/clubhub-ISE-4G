@@ -40,12 +40,15 @@ The overhead rises from 11 to 16 paths, an increase of 5/11 × 100 ≈ 45.5%. At
 Decision: We would not accept the sixth member in week 11 unless the additional person has a clearly defined role that provides enough benefit to justify the onboarding and coordination costs, consistent with Brooks's law.
 
 ## Reflection: the essential difficulty we expect first
-The essential difficulty our team is most likely to encounter first is changeability. ITC Club Hub’s requirements may change as the client and students better understand what the system should support. For example, the rules for importing club data may initially require only a club name and capacity, but the client may later request additional fields such as category, meeting schedule, room, or contact person. Such changes could affect the CSV format, validation rules, C++ classes, tests, and documentation at the same time.
+Reflection
 
-During the next four weeks, our team will reduce this risk by recording every requirement in GitHub Issues and asking the Product Owner to confirm changes with the client. Each accepted change will include clear acceptance criteria and identify the files that may be affected. We will also keep the program modular by separating input validation, data storage, and output formatting. This will allow one part of the program to change without unnecessarily rewriting other parts. Before merging a changed requirement into main, another member will review the implementation and check that the automated tests still pass.
+The essential difficulty that our team is most likely to encounter first is changeability in ITC Club Hub. As we navigate ITC Club Hub, it is completely expected of us to get confused especially with the rapid transformation demands from the client. For demonstration, the rules for importing club data may initially require only a club name and capacity. However, the client may want to add other fields such as category, meeting schedules and so on. These abrupt requests of change can affect the CSV format, validation rules, C++ classes, and tests. 
+
+For the next four weeks, our team will be on guard and prepared with the rapid request of changes from the client by recording issues that lie in GitHub, while making sure we have the confirmations made by the Product Owner and the client. We will also work on our collaboration skills within our team ensuring that we communicate well from Product Owner to Scrum Masters to Developers. The quality of our work will improve as anticipated as we learn to work together.
 
 # Signed Members Statement
 
 - Song Vansak (Scrum Master): I will organize the short team check-in, focusing more on communication, progress, GitHub issues.
 - Lor Hengleap (Developer 1): I expect to find more bugs than planned especially when integrating , so i will test each feature before adding to the system.
 - Sreu Visal (Developer 2): I will test my code regularly, read error messages carefully, and fix problems as soon as they appear.
+- Keo Vimeanrathbosba (Product Owner): I will be checking in with the client to make sure we can give them what they ask for and what they really want and work well with my team.
