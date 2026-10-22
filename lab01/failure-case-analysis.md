@@ -1,4 +1,4 @@
-# Failure case analysis ·Therac-25 (v1.0, 10/21/2026)
+# Failure case analysis · Therac-25 (v1.1, 10/22/2026)
 
 | Authors             | Section |
 | ------------------- | ------- |
@@ -31,6 +31,8 @@ controls. Certain fast changes made by an operator could leave the software in
 an unsafe state. Unclear error messages then allowed the operator to continue
 treatment without knowing that the patient had received dangerous radiation [2].
 
+A 2013 Oak Ridge National Laboratory review details one failure sequence: after an operator selected X-ray treatment and quickly corrected it to electron treatment, a race condition could leave the high-current X-ray beam settings active while the turntable was in the electron-treatment or positioning configuration. The review notes that the dose display could report an underdose and treatment could pause only temporarily, allowing the operator to resume it and expose the patient again [3]. This supports treating the accident as a system-level failure involving timing, machine state, monitoring, and operator feedback, rather than as an isolated input mistake.
+
 ```mermaid
 flowchart TD
     A[Hardware safety controls were reduced] --> B[Safety depended on software]
@@ -45,8 +47,8 @@ flowchart TD
 
 | Root cause                                   | Type           | Difficulty   | Justification                                                                   |
 | -------------------------------------------- | -------------- | ------------ | ------------------------------------------------------------------------------- |
-| Unsafe shared data and timing behavior       | Technical      | Complexity   | Several software tasks interacted in ways that were difficult to predict [2].   |
-| Insufficient testing of rapid operator input | Process        | Invisibility | The defect appeared only during a particular sequence and timing of inputs [2]. |
+| Unsafe shared data and timing behavior       | Technical      | Complexity   | Several software tasks interacted in ways that were difficult to predict [2, 3].   |
+| Insufficient testing of rapid operator input | Process        | Invisibility | The defect appeared only during a particular sequence and timing of inputs [2, 3]. |
 | Independent hardware interlocks were reduced | Organisational | Invisibility | An independent safety layer could have stopped the unsafe radiation beam [2].   |
 
 ## 5. Practices that would have prevented or limited it
@@ -73,3 +75,9 @@ flowchart TD
    Title: “An Investigation of the Therac-25 Accidents”  
    Year: 1993  
    URL: Read the Therac-25 investigation (https://web.mit.edu/6.033/2004/wwwdocs/papers/Therac_1.html)
+
+3. Authors: Richard Wood, Michael Muhlheim, Laura Pullum, Cyrus Smith, David Holcomb, and Kofi Korsah.
+   Title: *Update on Common-Cause Failure Experience and Mitigation Practices* (ORNL/TM-2013/563).
+   Institution: Oak Ridge National Laboratory, prepared for the U.S. Department of Energy, 2013.
+   Relevant section: 2.2.3, “Therac-25 Massive Overdoses,” pp. 9–11.
+   URL: [Read the ORNL report (PDF)](https://info.ornl.gov/sites/publications/Files/Pub47390.pdf)
