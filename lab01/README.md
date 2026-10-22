@@ -12,7 +12,7 @@
 | `src/banner.cpp`                  | Build the version and team banner                      | Developer 1, Developer 2 |
 | `src/main.cpp`                    | Run and print the banner                               | Developer 1, Developer 2 |
 | `lab01/team-charter.md`           | Record team working agreements                         | Team                     |
-| `lab01/decision.md`              | Record team decisions                                  | Team                     |
+| `lab01/decisions.md`              | Record team decisions                                  | Team                     |
 | `lab01/failure-case-analysis.md`  | Analyse the Therac-25 failure                          | Team                     |
 | `lab01/problem-statement.md`      | Define the Club Hub problem and scope                  | Product Owner            |
 | `lab01/stakeholders.md`           | Identify Club Hub stakeholders                         | Product Owner            |

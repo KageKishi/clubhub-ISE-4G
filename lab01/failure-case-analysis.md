@@ -6,7 +6,7 @@
 | Song Vansak         | 3-4     |
 | Lor Hengleap        | 5-6     |
 | Sreu Visal          | 7       |
- 
+
 ## 1. Context
 
 Therac-25 was a computer-controlled medical linear accelerator manufactured by Atomic Energy of Canada Limited. Hospitals used the machine to treat cancer by directing high-energy electron or X-ray beams at tumors [2].
