@@ -7,8 +7,7 @@ namespace clubhub {
 
 // Minute precision is enough for club events. Times are ITC local
 // time (Asia/Phnom_Penh); this lab does no time-zone conversion.
-using TimePoint = std::chrono::time_point<std::chrono::system_clock,
-                                          std::chrono::minutes>;
+using TimePoint = std::chrono::sys_time<std::chrono::minutes>;
 
 class Event {
 public:
