@@ -1,0 +1,7 @@
+flowchart LR
+  S([Student]) -- browse, register, cancel --> CH[ITC Club Hub]
+  CH -- confirmation, reminder request --> MAIL[[E-mail service]]
+  MAIL -- e-mail --> S
+  %% TODO: Club leader, Organiser, Administrator
+  %% TODO: ITC student directory (what does Club Hub ask, what comes back?)
+  %% TODO: label every arrow with the data that flows
