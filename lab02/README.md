@@ -49,24 +49,26 @@ The three-tier sketch decomposes the application into **Presentation**, **Logic*
 
 ## 3. Comprehensive File Inventory
 
-| File Path                           | Description                                                                              | Main Author              |
-| :---------------------------------- | :--------------------------------------------------------------------------------------- | :----------------------- |
-| `lab02/app-classification.md`       | Classification and analysis of five everyday applications using chapter vocabulary       | Everyone                 |
-| `lab02/app-quadrant.mmd`            | Mermaid quadrant chart charting applications by timing vs. availability demands          | Everyone                 |
-| `lab02/adr-001-application-type.md` | Architecture Decision Record selecting the PWA/web hybrid approach via weighted criteria | Product Owner / Everyone |
-| `lab02/quality-scenarios.md`        | Six complete quality attribute scenarios (QAS-01 to QAS-06) with prioritized trade-offs  | Scrum Master / Everyone  |
-| `lab02/context-diagram.mmd`         | Mermaid source for the system context diagram                                            | Lor Hengleap             |
-| `lab02/context-diagram.png`         | Exported image of the system context diagram                                             | Lor Hengleap             |
-| `lab02/architecture.mmd`            | Mermaid source for the three-tier architecture sketch                                    | Lor Hengleap             |
-| `lab02/architecture.png`            | Exported image of the three-tier architecture sketch                                     | Lor Hengleap             |
-| `include/clubhub/event.hpp`         | Core Event class definition, time point types, and parsing declarations                  | Given                    |
-| `include/clubhub/event_csv.hpp`     | CSV parser interface structures (`CsvError`, `EventLoadResult`)                          | Given                    |
-| `src/event.cpp`                     | Event validation rules and strict ISO/local date-time string parsing/formatting          | Lor Hengleap             |
-| `src/event_csv.cpp`                 | Robust line-by-line CSV parser with error recovery and line numbering                    | Lor Hengleap             |
-| `src/cli/main.cpp`                  | Thin command-line interface handling sorting, console output, and errors                 | Lor Hengleap             |
-| `CMakeLists.txt`                    | Build configuration defining `clubhub_core` library and `clubhub` executable             | Given                    |
-| `data/events.csv`                   | Sample event dataset including valid records and intentional error row (`E004`)          | Given                    |
-| `lab02/README.md`                   | Laboratory documentation, inventories, reuse logs, and change history                    | Lor Hengleap             |
+| File Path                            | Description                                                                              | Main Author              |
+| :----------------------------------- | :--------------------------------------------------------------------------------------- | :----------------------- |
+| `lab02/app-classification.md`        | Classification and analysis of five everyday applications using chapter vocabulary       | Everyone                 |
+| `lab02/app-quadrant.mmd`             | Mermaid quadrant chart charting applications by timing vs. availability demands          | Everyone                 |
+| `lab02/adr-001-application-type.md`  | Architecture Decision Record selecting the PWA/web hybrid approach via weighted criteria | Product Owner / Everyone |
+| `lab02/quality-scenarios.md`         | Six complete quality attribute scenarios (QAS-01 to QAS-06) with prioritized trade-offs  | Scrum Master / Everyone  |
+| `lab02/context-diagram.mmd`          | Mermaid source for the system context diagram                                            | Lor Hengleap             |
+| `lab02/context-diagram.png`          | Exported image of the system context diagram                                             | Lor Hengleap             |
+| `lab02/architecture.mmd`             | Mermaid source for the three-tier architecture sketch                                    | Lor Hengleap             |
+| `lab02/architecture.png`             | Exported image of the three-tier architecture sketch                                     | Lor Hengleap             |
+| `lab02/challenge/offline-checkin.md` | Offline-first check-in sequence diagram, conflict rules, and quality trade-offs          | Lor Hengleap             |
+| `include/clubhub/queued_checkin.hpp` | C++ data structures for queued offline check-ins and sync state                          | Lor Hengleap             |
+| `include/clubhub/event.hpp`          | Core Event class definition, time point types, and parsing declarations                  | Given                    |
+| `include/clubhub/event_csv.hpp`      | CSV parser interface structures (`CsvError`, `EventLoadResult`)                          | Given                    |
+| `src/event.cpp`                      | Event validation rules and strict ISO/local date-time string parsing/formatting          | Lor Hengleap             |
+| `src/event_csv.cpp`                  | Robust line-by-line CSV parser with error recovery and line numbering                    | Lor Hengleap             |
+| `src/cli/main.cpp`                   | Thin command-line interface handling sorting, console output, and errors                 | Lor Hengleap             |
+| `CMakeLists.txt`                     | Build configuration defining `clubhub_core` library and `clubhub` executable             | Given                    |
+| `data/events.csv`                    | Sample event dataset including valid records and intentional error row (`E004`)          | Given                    |
+| `lab02/README.md`                    | Laboratory documentation, inventories, reuse logs, and change history                    | Lor Hengleap             |
 
 ---
 
@@ -76,8 +78,8 @@ The three-tier sketch decomposes the application into **Presentation**, **Logic*
 
 | Reused File             | Commit Hash / Version | Purpose in Lab-02                                                                                                        |
 | :---------------------- | :-------------------- | :----------------------------------------------------------------------------------------------------------------------- |
-| `lab01/team-charter.md` | `3f8e2a1`             | Defines team collaboration roles, task-sharing, consensus decision rules, and peer-review workflow guidelines.           |
-| `lab01/decisions.md`    | `7c4b1d9`             | Houses Architecture Decision Records (ADR-001) specifying web PWA/front-end choices referenced in the presentation tier. |
+| `lab01/team-charter.md` | `a9d505f`             | Defines team collaboration roles, task-sharing, consensus decision rules, and peer-review workflow guidelines.           |
+| `lab01/decisions.md`    | `1875190`             | Houses Architecture Decision Records (ADR-001) specifying web PWA/front-end choices referenced in the presentation tier. |
 
 ---
 
@@ -93,8 +95,14 @@ cmake -S . -B build
 cmake --build build
 
 # Run the list-events command using the sample dataset
+# Visual Studio generator on Windows (PowerShell or Git Bash)
+./build/Debug/clubhub.exe list-events data/events.csv
+
+# Single-configuration generator (for example, Ninja or Unix Makefiles)
 ./build/clubhub list-events data/events.csv
 ```
+
+The sample intentionally contains invalid row `E004`; the CLI prints the four valid events, reports the skipped row, and returns exit code 1.
 
 ---
 

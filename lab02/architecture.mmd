@@ -1,16 +1,16 @@
 flowchart TB
     subgraph P [Presentation Tier]
-        CLI[C++ CLI<br/>· src/cli/]:::implemented
-        PWA[Web PWA / Web UI<br/>· ADR-001 modelled]:::modelled
+        CLI[C++ CLI<br/>· src/cli/]:::cpp
+        PWA[Proposed PWA / responsive web<br/>· modelled only, ADR-001 pending]:::modelled
     end
 
     subgraph L [Logic Tier]
-        RS[RegistrationService<br/>· include/clubhub/, src/]:::implemented
-        ES[EventService<br/>· include/clubhub/, src/]:::implemented
+        RS[RegistrationService<br/>· C++ core scope: include/clubhub/, src/]:::cpp
+        ES[EventService<br/>· C++ core scope: include/clubhub/, src/]:::cpp
     end
 
     subgraph D [Data Tier]
-        CSV[(CSV files<br/>· data/)]:::implemented
+        CSV[(CSV files<br/>· data/)]:::cpp
     end
 
     subgraph External [External Systems]
@@ -32,6 +32,6 @@ flowchart TB
     RS -->|verify student ID| Dir
 
     %% Styling classes
-    classDef implemented fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#155724;
+    classDef cpp fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#155724;
     classDef modelled fill:#f8d7da,stroke:#dc3545,stroke-width:2px,color:#721c24;
     classDef external fill:#e2e3e5,stroke:#6c757d,stroke-width:2px,color:#383d41;
