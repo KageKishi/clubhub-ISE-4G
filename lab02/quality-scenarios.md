@@ -21,6 +21,26 @@ Version 1.0 · 2026-11-03 · Team: clubhub-ISE-4G Reviewed by (Scrum Master): So
 | Response         | system validates QR code, updates attendance status to "Present", and confirms successful check-in on the organizer's screen |
 | Response measure | response time $\le 1.5$ seconds per scan from tap to confirmation UI update                                                  |
 
+## QAS-03 · Usability · written by Keo Vimeanrathbosba
+| Part             | Content |
+|------------------|---------|
+| Source           | first-year student user |
+| Stimulus         | attempts to find and register for a mandatory campus workshop to record attendance |
+| Environment      | mobile smartphone browser (Chrome/Safari), normal campus Wi-Fi network conditions |
+| Artifact         | EventDiscoveryUI and RegistrationForm component |
+| Response         | user successfully navigates from home screen, locates the event, and completes registration with clear inline feedback and validation errors |
+| Response measure | completed in $\le 3$ taps and $\le 45$ seconds total time; zero user assistance required |
+
+## QAS-04 · Security · written by Keo Vimeanrathbosba
+| Part             | Content |
+|------------------|---------|
+| Source           | malicious or unauthorized student peer |
+| Stimulus         | attempts to scrape or directly query attendance records and phone numbers of club members via unauthorized API endpoint access |
+| Environment      | runtime, standard campus network, unauthorized session token or unauthenticated request |
+| Artifact         | AuthenticationMiddleware, AccessControlService, Member database table |
+| Response         | system detects unauthorized privilege level, blocks request, logs security event, and returns a 403 Forbidden response protecting personal data (student phone numbers and attendance logs) |
+| Response measure | 0 unauthorized records exposed; detection and block executed in $\le 50\text{ ms}$ |
+
 ## QAS-05 · Modifiability · written by Sreu Visal
 | Part             | Content                                                                                                                                             |
 | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
