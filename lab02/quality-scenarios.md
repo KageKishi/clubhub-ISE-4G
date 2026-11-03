@@ -21,10 +21,30 @@ Version 1.0 · 2026-11-03 · Team: clubhub-ISE-4G Reviewed by (Scrum Master): So
 | Response         | system validates QR code, updates attendance status to "Present", and confirms successful check-in on the organizer's screen |
 | Response measure | response time $\le 1.5$ seconds per scan from tap to confirmation UI update                                                  |
 
-## QAS-06 · Portability · written by __
+## QAS-05 · Modifiability · written by Sreu Visal
+| Part             | Content                                                                                                                                             |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source           | a developer of the team                                                                                                                             |
+| Stimulus         | adds the waiting list (a Should feature): a full event puts new registrations in status Waitlisted                                                  |
+| Environment      | design time, after Sprint 1, core already tested                                                                                                    |
+| Artifact         | RegistrationService, Registration (include/clubhub/)                                                                                                |
+| Response         | change made in the core only; the CLI gains one column; existing behaviour unchanged                                                                |
+| Response measure | done in $\le 2$ person-days; $\le 4$ files changed under include/ and src/; 0 changes in src/cli/ other than display; all existing tests still pass |
+
+## QAS-06 · Portability · written by Sreu Visal
+| Part             | Content                                                                                                                                                          |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Source           | front-end development team                                                                                                                                       |
+| Stimulus         | deploys the web application across different target mobile operating systems and modern web browsers                                                             |
+| Environment      | production release testing across Google Chrome (Android/Windows), Safari (iOS/macOS), and Firefox                                                               |
+| Artifact         | responsive CSS layout framework and client-side JavaScript bundle                                                                                                |
+| Response         | UI elements render correctly, touch interactions function without misalignment, and core features operate identically across all targeted platforms              |
+| Response measure | 100% layout compatibility verified on iOS Safari (v16+) and Android Chrome (v110+); zero critical rendering bugs reported in automated cross-browser test suites |
 
 ## Priorities
 | Scenario | Business importance | Technical risk | Protects                       | First?  |
 | -------- | ------------------- | -------------- | ------------------------------ | ------- |
 | QAS-01   | High                | High           | All users / system reliability | **Yes** |
 | QAS-02   | High                | Medium         | Event organizers & attendees   | **Yes** |
+| QAS-05   | Medium              | Medium         | Development team               | **No**  |
+| QAS-06   | Medium              | Low            | Cross-platform users           | **No**  |
