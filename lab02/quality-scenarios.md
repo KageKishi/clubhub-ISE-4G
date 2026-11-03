@@ -66,5 +66,7 @@ Version 1.0 · 2026-11-03 · Team: clubhub-ISE-4G Reviewed by (Scrum Master): So
 | -------- | ------------------- | -------------- | ------------------------------ | ------- |
 | QAS-01   | High                | High           | All users / system reliability | **Yes** |
 | QAS-02   | High                | Medium         | Event organizers & attendees   | **Yes** |
+| QAS-03   | Medium              | Low            | General students | No |
+| QAS-04   | High                | High           | Club members' personal data | **Yes** |
 | QAS-05   | Medium              | Medium         | Development team               | **No**  |
 | QAS-06   | Medium              | Low            | Cross-platform users           | **No**  |
