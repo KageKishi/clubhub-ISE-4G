@@ -21,6 +21,8 @@ Version 1.0 · 2026-11-03 · Team: clubhub-ISE-4G Reviewed by (Scrum Master): So
 | Response         | system validates QR code, updates attendance status to "Present", and confirms successful check-in on the organizer's screen |
 | Response measure | response time $\le 1.5$ seconds per scan from tap to confirmation UI update                                                  |
 
+
+
 ## QAS-06 · Portability · written by __
 
 ## Priorities
