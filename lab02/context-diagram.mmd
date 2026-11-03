@@ -1,7 +1,35 @@
 flowchart LR
-  S([Student]) -- browse, register, cancel --> CH[ITC Club Hub]
-  CH -- confirmation, reminder request --> MAIL[[E-mail service]]
-  MAIL -- e-mail --> S
-  %% TODO: Club leader, Organiser, Administrator
-  %% TODO: ITC student directory (what does Club Hub ask, what comes back?)
-  %% TODO: label every arrow with the data that flows
+    %% Central Node
+    CH[ITC Club Hub]
+
+    %% Human Roles
+    Student([Student])
+    Leader([Club leader])
+    Org([Organiser])
+    Admin([Administrator])
+
+    %% External Systems (using double brackets)
+    Email[[E-mail service]]
+    Dir[[ITC student directory]]
+
+    %% Student Flows
+    Student -->|browse, register, cancel| CH
+    CH -->|event list, registration status| Student
+
+    %% Club Leader Flows
+    Leader -->|event proposal, club info update| CH
+    CH -->|proposal status, participant list| Leader
+
+    %% Organiser Flows
+    Org -->|check-in scans, attendance update| CH
+    CH -->|event schedule, roster| Org
+
+    %% Administrator Flows
+    Admin -->|club approval, user management| CH
+    CH -->|monthly report, system logs| Admin
+
+    %% External System Flows
+    CH -->|confirmation, reminder request| Email
+    Email -->|e-mail notification| Student
+    CH -->|student ID lookup| Dir
+    Dir -->|name, e-mail, department| CH
