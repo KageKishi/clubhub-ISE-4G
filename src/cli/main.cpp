@@ -1,10 +1,8 @@
-// src/cli/main.cpp: the only place that talks to the user
 #include <algorithm>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
 #include <string>
-
 #include "clubhub/event.hpp"
 #include "clubhub/event_csv.hpp"
 
@@ -16,13 +14,37 @@ int listEvents(const std::string& path) {
         std::cerr << "error: cannot open " << path << '\n';
         return 2;
     }
+    
     auto [events, errors] = clubhub::loadEventsCsv(file);
-    // TODO: sort events by start time (std::ranges::sort, projection
-    //       &clubhub::Event::start)
-    // TODO: print a header line and one aligned row per event
-    //       (std::left, std::setw; formatTimePoint for the start)
-    // TODO: print "<n> event(s)", then every error to std::cerr as
-    //       <path>:<line>: skipped: <message>
+    
+    // Sort events by start time
+    std::ranges::sort(events, {}, [](const clubhub::Event& event) {
+        return event.start();
+    });
+    
+    // Print aligned table header
+    std::cout << std::left 
+              << std::setw(18) << "START" 
+              << std::setw(22) << "TITLE" 
+              << std::setw(13) << "LOCATION" 
+              << "CAPACITY\n";
+              
+    // Print each event row
+    for (const auto& e : events) {
+        std::cout << std::left 
+                  << std::setw(18) << clubhub::formatTimePoint(e.start()) 
+                  << std::setw(22) << e.title() 
+                  << std::setw(13) << e.location() 
+                  << e.capacity() << '\n';
+    }
+    
+    std::cout << events.size() << " event(s)\n";
+    
+    // Print errors to std::cerr
+    for (const auto& err : errors) {
+        std::cerr << path << ":" << err.line << ": skipped: " << err.message << '\n';
+    }
+    
     return errors.empty() ? 0 : 1;
 }
 

@@ -1,14 +1,37 @@
 flowchart TB
-  subgraph P[Presentation]
-    CLI[C++ CLI · src/cli/]
-    %% TODO: the front ends from ADR-001
-  end
-  subgraph L[Logic]
-    RS[RegistrationService · include/clubhub/, src/]
-  end
-  subgraph D[Data]
-    CSV[(CSV files · data/)]
-  end
-  CLI --> RS
-  RS --> CSV
-  %% TODO: external systems, and mark implemented vs modelled nodes
+    subgraph P [Presentation Tier]
+        CLI[C++ CLI<br/>· src/cli/]:::implemented
+        PWA[Web PWA / Web UI<br/>· ADR-001 modelled]:::modelled
+    end
+
+    subgraph L [Logic Tier]
+        RS[RegistrationService<br/>· include/clubhub/, src/]:::implemented
+        ES[EventService<br/>· include/clubhub/, src/]:::implemented
+    end
+
+    subgraph D [Data Tier]
+        CSV[(CSV files<br/>· data/)]:::implemented
+    end
+
+    subgraph External [External Systems]
+        Email[[E-mail service]]:::external
+        Dir[[ITC student directory]]:::external
+    end
+
+    %% Tier Interconnections
+    CLI --> RS
+    PWA --> RS
+    CLI --> ES
+    PWA --> ES
+
+    RS --> CSV
+    ES --> CSV
+
+    %% Logic calls to external systems
+    ES -->|reminder / confirmation| Email
+    RS -->|verify student ID| Dir
+
+    %% Styling classes
+    classDef implemented fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#155724;
+    classDef modelled fill:#f8d7da,stroke:#dc3545,stroke-width:2px,color:#721c24;
+    classDef external fill:#e2e3e5,stroke:#6c757d,stroke-width:2px,color:#383d41;
