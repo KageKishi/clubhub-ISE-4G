@@ -1,0 +1,14 @@
+flowchart TB
+  subgraph P[Presentation]
+    CLI[C++ CLI · src/cli/]
+    %% TODO: the front ends from ADR-001
+  end
+  subgraph L[Logic]
+    RS[RegistrationService · include/clubhub/, src/]
+  end
+  subgraph D[Data]
+    CSV[(CSV files · data/)]
+  end
+  CLI --> RS
+  RS --> CSV
+  %% TODO: external systems, and mark implemented vs modelled nodes
