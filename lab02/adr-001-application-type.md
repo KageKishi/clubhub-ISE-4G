@@ -1,6 +1,6 @@
 # ADR-001 · Application Types for ITC Club Hub
 
-Version 1.0 · 2026-11-03 · Status: Proposing · Decider: Keo Vimeanrathbosba (Product Owner)
+Version 1.0 · 2026-11-03 · Status: Proposing · Decider: Keo Vimeanrathbosba (Product Owner), Song Vansak (Scrum Master)
 
 ## Context
 
