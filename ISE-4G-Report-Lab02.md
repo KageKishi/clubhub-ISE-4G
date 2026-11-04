@@ -8,7 +8,7 @@
 | **Instructor** | Tal Tongsreng |
 | **Date** | 11/04/2026 |
 | **Project** | ITC Club Hub · clubhub-ISE-4G |
-| **Lab branch snapshot** | `lab-02` at `a5b74f4` |
+| **Lab branch snapshot** | `lab-02` at `f337432` |
 
 ---
 
@@ -25,7 +25,7 @@ This report follows the Lab 01 report as a model. It summarizes the Lab 02 tasks
 
 Lab 02 extends the ITC Club Hub project from team planning and a small C++ starter into application classification, an application-type decision, quality attribute scenarios, architecture diagrams, and an event-listing C++ command-line program. The optional challenge describes offline check-in and provides a C++ queue interface.
 
-The team classified ABA Mobile, Telegram, a car ABS controller, Moodle at ITC, and Roblox. The application-type ADR compares four options and recommends a PWA with responsive web screens. Its approval state needs careful reading: the ADR header says “Approved” and records client approval on November 4, while the decision log still says instructor/TA review is pending. This report describes Option B as client-approved, with academic review still pending according to the decision log.
+The team classified ABA Mobile, Telegram, a car ABS controller, Moodle at ITC, and Roblox. The application-type ADR compares four options and recommends Option B, a PWA with responsive web screens. The ADR header says “Approved,” and the November 4, 2026 decision-log entry records the client’s approval at 8:10 AM. This report treats Option B as approved. The earlier November 3 pending-review wording remains in the source documents as historical text.
 
 The quality scenarios cover availability, check-in performance, usability, security, modifiability, and portability. QAS-01 and QAS-02 are marked as first priorities. The challenge adds a seventh offline-resilience scenario and describes conflict handling and idempotent synchronization.
 
@@ -33,7 +33,7 @@ The implemented C++ scope contains an `Event` domain class, a CSV loader, and a 
 
 ## Repository snapshot and scope
 
-The report is based on branch `lab-02`, commit `a5b74f4` (“Approval”). Generated build output and Git metadata are omitted from the project tree.
+The report is based on branch `lab-02`, commit `f337432` (“Approval edition”). Generated build output and Git metadata are omitted from the project tree.
 
 ```text
 clubhub-ISE-4G/
@@ -99,15 +99,15 @@ The key comparison in the submission is that an ABS controller is embedded softw
 
 ADR-001 compares native applications, a PWA with responsive web screens, responsive web only, and a cross-platform mobile application plus web administration. It scores each option against cost, reach, offline check-in, reminders, and administration/reporting. Option B receives the highest total score and is recommended because it pairs broad device reach with a local queue for check-in during a venue network outage.
 
-The repository records client approval on November 4. However, the ADR header, its review instructions, and the decision log do not use the same approval state. The decision log’s November 3 entry says instructor/TA review and acceptance are pending; its November 4 entry records client approval, but places that text in the alternatives column and lists “Teacher” as the decider. The report preserves this distinction rather than treating client approval as documented instructor/TA acceptance.
+The ADR header records the status as “Approved,” and `lab01/decisions.md` entry 5 records that the client approved the ADR on November 4, 2026 at 8:10 AM. The November 3 entry’s pending-review wording predates that approval and is treated here as historical. The ADR’s review paragraph also still contains an earlier instruction to present it for review and then update its status; that wording should be refreshed in the source ADR when the team next edits it.
 
 ## Task 3: Quality attribute scenarios
 
-The quality-scenarios file contains six structured scenarios. Each uses the source, stimulus, environment, artifact, response, and response-measure fields. The priority table marks availability (QAS-01) and door check-in performance (QAS-02) as first priorities. The check-in scenario explicitly makes offline queue behavior conditional on approval of ADR-001 Option B. QAS-06 also describes its browser targets as provisional.
+The quality-scenarios file contains six structured scenarios. Each uses the source, stimulus, environment, artifact, response, and response-measure fields. The priority table marks availability (QAS-01) and door check-in performance (QAS-02) as first priorities. QAS-02 still phrases offline queue behavior as conditional on ADR-001 approval, although the ADR is now approved; that sentence in the scenario is stale. QAS-06 also describes its browser targets as provisional.
 
 ## Task 4: Context and architecture diagrams
 
-The context diagram places ITC Club Hub between students, club leaders, organisers, administrators, the e-mail service, and the ITC student directory. The architecture diagram sketches presentation, logic, data, and external systems, distinguishing the CLI and C++ core from a proposed, modelled PWA.
+The context diagram places ITC Club Hub between students, club leaders, organisers, administrators, the e-mail service, and the ITC student directory. The architecture diagram sketches presentation, logic, data, and external systems, distinguishing the CLI and C++ core from the modelled PWA. The diagram source still labels the PWA as “Proposed” and says “ADR-001 pending”; those status labels are stale now that the ADR is approved. The PWA remains modelled rather than implemented.
 
 The architecture sketch names `RegistrationService` and `EventService`, but the current C++ project implements an `Event` model and CSV loading rather than those service classes. The challenge queue header is also declaration-only and is not part of the CMake build. These are useful scope boundaries to keep clear when describing the architecture.
 
@@ -846,7 +846,7 @@ Version 0.2 · 2026-11-03
 | 2 | 2026-10-14 | Song Vansak selected as Scrum Master | Product Owner | None recorded |
 | 3 | 2026-10-14 | Adopt the team's working agreements | Everyone | None recorded |
 | 4 | 2026-11-03 | Propose application types for ITC Club Hub; see [ADR-001](../lab02/adr-001-application-type.md). Pending instructor/TA review and acceptance. | Product Owner | See rejected options in ADR-001 |
-| 5 | 2026-11-04 | Product Owner sent the ADR to the client for approval. | Teacher | Approved by Client. |
+| 5 | 2026-11-04 | Client approved our ADR that was sent by the Product Owner. | Teacher | Approved by Client. |
 ````
 
 ### File: `lab02/README.md`
