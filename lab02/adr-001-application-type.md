@@ -1,6 +1,6 @@
 # ADR-001 · Application Types for ITC Club Hub
 
-Version 1.0 · 2026-11-03 · Status: Proposing · Decider: Keo Vimeanrathbosba (Product Owner), Song Vansak (Scrum Master)
+Version 1.0 · 2026-11-03 · Status: Approved · Decider: Keo Vimeanrathbosba (Product Owner), Song Vansak (Scrum Master)
 
 ## Context
 
@@ -68,3 +68,5 @@ Choose **Option B: a PWA for students and organisers, with responsive administra
 ## Review and decision log
 
 The Product Owner will present this ADR to the teaching assistant or instructor for review. After that review, update the status here to **Accepted** with the acceptance date and add a corresponding entry to `lab01/decisions.md`.
+
+The client has approved our ADR on 4th November 2026 at 8:10AM.

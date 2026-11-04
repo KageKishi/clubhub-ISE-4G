@@ -1,4 +1,4 @@
-# Challenge: Offline-First Check-In for Debate Night (Amphi A)
+# Challenge: Offline-First Check-In for Workshop (Meeting Hall A)
 
 Version: 1.0 · Date: 2026-11-03 · Team: clubhub-ISE-4G
 
@@ -16,7 +16,7 @@ sequenceDiagram
     participant API as Club Hub API
 
     Note over Organiser, API: Wi-Fi down in Amphi A
-    Organiser->>PWA: scan QR of student e20230117
+    Organiser->>PWA: scan QR of student p20250032
     PWA->>IDB: store check-in (localId: UUID, state: Pending)
     IDB-->>PWA: store confirmed
     PWA-->>Organiser: green tick, marked offline (local count)
