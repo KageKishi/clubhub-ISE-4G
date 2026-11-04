@@ -8,4 +8,4 @@ Version 0.2 · 2026-11-03
 | 2 | 2026-10-14 | Song Vansak selected as Scrum Master | Product Owner | None recorded |
 | 3 | 2026-10-14 | Adopt the team's working agreements | Everyone | None recorded |
 | 4 | 2026-11-03 | Propose application types for ITC Club Hub; see [ADR-001](../lab02/adr-001-application-type.md). Pending instructor/TA review and acceptance. | Product Owner | See rejected options in ADR-001 |
-| 5 | 2026-11-04 | Product Owner sent the ADR to the client for approval. | Teacher | Approved by Client. |
+| 5 | 2026-11-04 | Client approved our ADR that was sent by the Product Owner. | Teacher | Approved by Client. |
