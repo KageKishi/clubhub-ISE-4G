@@ -13,7 +13,7 @@
 
 | File                      | Task | Status |
 | ------------------------- | ---- | ------ |
-| lab03/data-inventory.md   | 1    | new    |
+| lab03/data-inventory.md   | 1    | done   |
 | include/clubhub/Student.h | 2    | new    |
 | LICENSE                   | 3    | new    |
 | TODO                      |      |        |
@@ -27,6 +27,7 @@
 ## Change log
 | Date       | Change                                                    | Author |
 | ---------- | --------------------------------------------------------- | ------ |
+| 2026-11-11 | Lab-03 task 1: data inventory, copies rules, phone lifecycle | Keo Vimeanrathbosba |
 | 2026-MM-DD | Lab-03: inventory, notice, Student, licence, a11y, ethics | team   |
 
 ## Open questions for the client

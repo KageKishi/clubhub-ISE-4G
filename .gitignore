@@ -1,9 +1,12 @@
-#=============ACTUAL LAB01============
+#=============ACTUAL LAB03============
 #Build
 build/
 
 # .vscode
-.vscode
+.
+
+#csv
+*.csv
 #=====================================
 
 #======== GITHUB BUNS IGNORED BUILT IN=============
