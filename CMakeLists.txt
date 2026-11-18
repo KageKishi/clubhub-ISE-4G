@@ -22,11 +22,13 @@ enable_testing()
 
 add_library(clubhub_core
     src/Student.cpp
+    src/ConsoleOutput.cpp
 )
 target_include_directories(clubhub_core PUBLIC include)
 
 add_executable(student_privacy_test
     tests/StudentPrivacyTest.cpp
+    tests/ConsoleOutputTest.cpp
 )
 target_link_libraries(student_privacy_test PRIVATE clubhub_core gtest_main)
 

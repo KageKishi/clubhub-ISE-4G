@@ -1,5 +1,5 @@
-// include/clubhub/ConsoleOutput.h
 // SPDX-License-Identifier: MIT
+// Copyright (c) 2026 Team Mekong, ITC Club Hub contributors
 #pragma once
 
 #include <string>
@@ -7,7 +7,7 @@
 
 namespace clubhub {
 
-// Declare here only if your repository does not define it yet.
+// Registration status labels remain readable when colour is disabled.
 enum class RegistrationStatus { Registered, Cancelled, CheckedIn, Waitlisted };
 
 // Upper-case word for a status: "REGISTERED", "CHECKED IN", ...
