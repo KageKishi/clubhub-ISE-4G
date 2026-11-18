@@ -14,13 +14,14 @@ Before introducing machine learning or behavioral tracking, we establish a robus
 
 Why this matters: This baseline solves 60% of the discovery problem (trending campus life and enrolled club updates) instantly, predictably, and transparently without collecting behavioral history or creating personal recommendation profiles. Any proposed AI feature must justify its added complexity over this baseline.
 ## 2 Data needed
-| Field | Source | In inventory? | New purpose / consent? | Minimisation |
-| Event ID / Title / Date | Events Table | Yes | No (Core feature) | None |
-| Club ID / Category | Club Table | Yes | No (Core feature) | None |
-| User Attendance History | Attendance Logs | 
+| Field                   | Source          | In inventory? | New purpose / consent? | Minimisation |
+| ----------------------- | --------------- | ------------- | ---------------------- | ------------ |
+| Event ID / Title / Date | Events Table    | Yes           | No (Core feature)      | None         |
+| Club ID / Category      | Club Table      | Yes           | No (Core feature)      | None         |
+| User Attendance History | Attendance Logs |
 ## 3 Bias risks
 | Risk | Who is harmed | Mitigation | Fairness check (metric, threshold) |
-|------|---------------|------------|------------------------------------|
+| ---- | ------------- | ---------- | ---------------------------------- |
 ## 4 Transparency
 "Why am I seeing this?" example: TODO
 ## 5 Opt-out design
