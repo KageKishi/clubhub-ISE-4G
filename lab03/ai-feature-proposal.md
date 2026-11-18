@@ -18,11 +18,15 @@ Why this matters: This baseline solves 60% of the discovery problem (trending ca
 | ----------------------- | --------------- | ------------- | ---------------------- | ------------ |
 | Event ID / Title / Date | Events Table    | Yes           | No (Core feature)      | None         |
 | Club ID / Category      | Club Table      | Yes           | No (Core feature)      | None         |
-| User Attendance History | Attendance Logs |
+| User Attendance History | Attendance Logs | Yes           | Yes (repurposing historical check-ins for preference profiling and collaborative filtering. Requires updated privacy policy consent.).    | Restricted to the past 6 months; older historical logs are anonymised or dropped. |
+| Student Faculty / Major | Student Profiles| Yes           | Yes (used as a cold-start demographic prior for new users.) | Aggregated to faculty level only (Example, "Engineering" instead of exact degree code).      |
 ## 3 Bias risks
 | Risk | Who is harmed | Mitigation | Fairness check (metric, threshold) |
 | ---- | ------------- | ---------- | ---------------------------------- |
-| ---- | ------------- | ---------- | ---------------------------------- |
+| Cold-Start Bias | First-year students, exchange students, and transfers who have no prior attendance logs. | Fall back to a blended cold-start model combining faculty-wide trending events and campus-wide popular events for a student's first 30 days. | Metric: Mean Click-Through Rate (CTR) disparity between students with less than 30 days tenure and returning students.<br>Threshold: Disparity must remain less than 5%. |
+| Popularity Feedback Loop (Rich-Get-Richer) | Small, niche, or newly formed clubs whose events get buried beneath large, well-established clubs. | Enforce a mandatory 20% Exploration Quota (1 of the 5 slots) reserved for clubs with fewer than 20 active members. | Metric: Ratio of recommendation share for clubs with fewer than 20 members to their share of total published events.<br>Threshold: Ratio must be at least 0.80 (within 20% of proportional representation). |
+| Attendance as a Proxy for Ability, Income, or Schedule | Commuters, working students, students with disabilities, or those unable to afford paid/off-campus events. | Exclude ticket price and attendance frequency volume from ranking weights; allow students to filter by accessibility, free entry, and preferred time windows. | Metric: Distribution of recommended events across free vs. paid tiers and accessible vs. non-accessible venues compared to overall event catalog.<br>Threshold: Free and accessible event recommendation shares must match or exceed their baseline catalog proportions (disparity less than 5%). |
+| Departmental & Major Siloing | Students seeking interdisciplinary skills, cultural exchange, or social communities outside their academic faculty. | Apply an interdisciplinary diversity constraint capping same-faculty recommendations at 3 out of 5 slots. | Metric: Percentage of total recommended events originating outside a student's registered faculty.<br>Threshold: Maintained at 20% or higher across all active user feeds. |
 ## 4 Transparency
 ### Example: "Why am I seeing this?"
 
