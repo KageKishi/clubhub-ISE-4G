@@ -1,5 +1,5 @@
 // include/clubhub/ConsoleOutput.h
-// SPDX-License-Identifier: <your licence>
+// SPDX-License-Identifier: MIT
 #pragma once
 
 #include <string>

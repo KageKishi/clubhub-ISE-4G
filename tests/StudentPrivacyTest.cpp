@@ -1,5 +1,6 @@
-// test/StudentPrivacyTest.cpp
-#include "clubhub/Student.h"
+// tests/StudentPrivacyTest.cpp
+// SPDX-License-Identifier: MIT
+#include "../include/clubhub/Student.h"
 
 #include <gtest/gtest.h>
 

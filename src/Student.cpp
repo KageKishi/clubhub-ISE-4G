@@ -1,4 +1,5 @@
 // src/Student.cpp
+// SPDX-License-Identifier: MIT
 #include "clubhub/Student.h"
 
 #include <cctype>

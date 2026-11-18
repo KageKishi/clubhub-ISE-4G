@@ -2,6 +2,10 @@
 #Build
 build/
 
+# Binaries and outputs
+*.exe
+tests/output/
+
 # .vscode
 .
 

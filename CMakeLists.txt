@@ -26,7 +26,7 @@ add_library(clubhub_core
 target_include_directories(clubhub_core PUBLIC include)
 
 add_executable(student_privacy_test
-    test/StudentPrivacyTest.cpp
+    tests/StudentPrivacyTest.cpp
 )
 target_link_libraries(student_privacy_test PRIVATE clubhub_core gtest_main)
 
