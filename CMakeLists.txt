@@ -34,3 +34,13 @@ target_link_libraries(student_privacy_test PRIVATE clubhub_core gtest_main)
 
 include(GoogleTest)
 gtest_discover_tests(student_privacy_test)
+
+if(CMAKE_GENERATOR MATCHES "Visual Studio")
+    file(GENERATE
+        OUTPUT "${CMAKE_BINARY_DIR}/CTestDefaultDebug.cmake"
+        CONTENT "if(NOT CTEST_CONFIGURATION_TYPE)\n  add_test(student_privacy_test \"${CMAKE_BINARY_DIR}/Debug/student_privacy_test.exe\")\nendif()\n"
+    )
+    set_property(DIRECTORY APPEND PROPERTY TEST_INCLUDE_FILES
+        "${CMAKE_BINARY_DIR}/CTestDefaultDebug.cmake"
+    )
+endif()
