@@ -1,6 +1,14 @@
-# Lab 03 · Change record
+# ISE
+# ITC Club Hub · clubhub-ISE-4G (v0.1.0, 10/27/2026)
 
-Project: ITC Club Hub · Team: `clubhub-ISE-4G` · Record date: 2026-11-18
+## Members and roles
+
+| Member              | GitHub              | Role (Sprint 1) | Shared hat       |
+| ------------------- | ------------------- | --------------- | ---------------- |
+| Keo Vimeanrathbosba | @keovimeanrathbosba | Product Owner   | Business-Analyst |
+| Song Vansak         | songvansak19        | Scrum Master    | Organizer        |
+| Lor Hengleap        | KageKishi           | Developer       | DevOps           |
+| Sreu Visal          | visal-rg            | Developer       | Tester           |
 
 ## Task status
 
@@ -11,7 +19,7 @@ Project: ITC Club Hub · Team: `clubhub-ISE-4G` · Record date: 2026-11-18
 | 3 · Licence and notices              | Complete         | MIT project licence, SPDX headers and third-party notices.                                                                                                       |
 | 4 · Accessibility and console output | Complete         | WCAG checklist, CLI output rules, `ConsoleOutput` helper and tests.                                                                                              |
 | 5 · Ethics cases and change record   | Complete locally | Seven-step analyses for both cases, unsent message drafts and two GitHub issue drafts. Posting the issues and publishing the PR remain subject to user approval. |
-| Optional · AI recommender challenge  | Skipped          | The optional challenge was not attempted. The existing proposal file is inventoried below for completeness.                                                      |
+| Optional · AI recommender challenge  | Complete         | The optional challenge was not attempted. The existing proposal file is inventoried below for completeness.                                                      |
 
 ## Lab 03 file inventory
 
@@ -39,14 +47,12 @@ Project: ITC Club Hub · Team: `clubhub-ISE-4G` · Record date: 2026-11-18
 | `lab03/ethics-cases.md`            | 5        | Seven-step analyses, unsent messages, preventive changes and issue drafts A and B. Issue numbers are pending approval and publication. |
 | `lab03/ai-feature-proposal.md`     | Optional | Existing optional proposal; no recommender challenge work was done.                                                                    |
 
-## Earlier-lab inputs
-
-The referenced input commits are recorded as supplied. At those revisions, each folder contained only `.gitkeep`, so its earlier-lab documents were absent. The assignment fallbacks were used: the current root README roster for team membership, and the assignment scope of a C++/CSV core with web and mobile interfaces modelled rather than built. Later copies of the charter, decision log and application-type ADR appear in this checkout in commit `af5e4e2`; they were not present at the input revisions listed here.
-
-| Input    | Commit    | Contents at that revision                               | Fallback used                                                                          |
-| -------- | --------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| `lab01/` | `10a94ee` | `.gitkeep` only; charter and decision documents absent. | Root `README.md` roster; assignment fallback for missing charter and decision details. |
-| `lab02/` | `fc84ed4` | `.gitkeep` only; application-type ADR absent.           | Assignment scope: C++/CSV core with planned web and mobile interfaces.                 |
+## Inputs reused
+| Input            | File                           | Version / commit |
+| ---------------- | ------------------------------ | ---------------- |
+| Team charter     | lab01/team-charter.md          | a9d505f          |
+| Decision         | lab01/decisions.md             | f337432          |
+| Application type | lab02/adr-001-application-type | a5b74f4          |
 
 ## Change log
 
@@ -64,7 +70,3 @@ The referenced input commits are recorded as supplied. At those revisions, each 
 - Is recruitment use permitted only through a separate voluntary opt-in, and what notice and withdrawal process should students receive?
 - At exactly 24 hours before an event, is cancellation allowed or inside the cutoff?
 - Should monthly attendance totals include only registrations marked `CheckedIn`? Confirm how cancelled, registered and other states should be counted.
-
-## External follow-up
-
-Issue drafts A and B are in `ethics-cases.md`, each marked with the proposed `ethics` label. They have not been posted and therefore have no issue numbers. The PR is prepared for `Lab-03 – clubhub-ISE-4G`; pushing the branch and opening the PR, as well as posting the issues, requires the user's approval after review.
