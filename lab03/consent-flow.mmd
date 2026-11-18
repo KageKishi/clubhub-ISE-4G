@@ -1,0 +1,18 @@
+flowchart LR
+    CLI["clubhub register"] --> Inputs["Enter student ID, name, email<br/>(one-line notice + link to full notice)"]
+    Web["Web: /register"] --> Inputs
+
+    Inputs --> EmailPrompt{"Email reminders?<br/>default: no"}
+    EmailPrompt -- "yes" --> SetEmail["setEmailReminders(true)"]
+    EmailPrompt -- "no" --> SmsPrompt{"SMS reminders?<br/>default: no"}
+    SetEmail --> SmsPrompt
+
+    SmsPrompt -- "yes" --> AskPhone["Ask phone number<br/>giveSmsConsent()"]
+    SmsPrompt -- "no" --> AccountCreated["Account created<br/>(All optional declined: works fully)"]
+    AskPhone --> AccountCreated
+
+    AccountCreated -.->|"Later: withdraw consent"| Settings["Account Settings<br/>(CLI: clubhub settings / Web: /profile)"]
+    Settings --> RevokeEmail["Email reminders: off<br/>setEmailReminders(false)"]
+    Settings --> RevokeSMS["SMS reminders: off<br/>withdrawSmsConsent()"]
+    RevokeEmail --> Saved["Preferences updated"]
+    RevokeSMS --> ErasePhone["Phone erased immediately<br/>phone() becomes nullopt"]

@@ -1,4 +1,4 @@
-// tests/StudentPrivacyTest.cpp
+// test/StudentPrivacyTest.cpp
 #include "clubhub/Student.h"
 
 #include <gtest/gtest.h>
@@ -18,13 +18,40 @@ TEST(StudentPrivacy, RedactedHidesPersonalData) {
     EXPECT_EQ(r.find("345"), std::string::npos);
 }
 
-TEST(StudentPrivacy, OptionalConsentsStartOff) { /* TODO */ }
-TEST(StudentPrivacy, WithdrawingSmsConsentErasesPhone) { /* TODO */ }
+TEST(StudentPrivacy, OptionalConsentsStartOff) {
+    Student s{"e20990417", "Test Student", "test@example.edu"};
+    EXPECT_FALSE(s.phone().has_value());
+    EXPECT_FALSE(s.remindersByEmail());
+}
+
+TEST(StudentPrivacy, WithdrawingSmsConsentErasesPhone) {
+    Student s{"e20990417", "Test Student", "test@example.edu"};
+    s.giveSmsConsent("+855 12 345 678");
+    EXPECT_TRUE(s.phone().has_value());
+    EXPECT_EQ(*s.phone(), "+855 12 345 678");
+
+    s.withdrawSmsConsent();
+    EXPECT_FALSE(s.phone().has_value());
+}
 
 TEST(StudentPrivacy, RejectsEmailWithoutAt) {
     EXPECT_THROW((Student{"e20990417", "A", "no-at-sign"}),
                  std::invalid_argument);
 }
 
-TEST(StudentPrivacy, RejectsPhoneWithLetters) { /* TODO */ }
-TEST(StudentPrivacy, MaskIdHidesShortIdsCompletely) { /* TODO */ }
+TEST(StudentPrivacy, RejectsPhoneWithLetters) {
+    Student s{"e20990417", "Test Student", "test@example.edu"};
+    EXPECT_THROW(s.giveSmsConsent("01234abc56"), std::invalid_argument);
+    EXPECT_THROW(s.giveSmsConsent("invalid-phone"), std::invalid_argument);
+    EXPECT_THROW(s.giveSmsConsent(""), std::invalid_argument);
+    EXPECT_FALSE(s.phone().has_value());
+}
+
+TEST(StudentPrivacy, MaskIdHidesShortIdsCompletely) {
+    EXPECT_EQ(clubhub::maskId("1"), "*");
+    EXPECT_EQ(clubhub::maskId("12"), "**");
+    EXPECT_EQ(clubhub::maskId("123"), "***");
+    EXPECT_EQ(clubhub::maskId(""), "");
+    EXPECT_EQ(clubhub::maskId("1234"), "12*4");
+    EXPECT_EQ(clubhub::maskId("e20990417"), "e2******7");
+}

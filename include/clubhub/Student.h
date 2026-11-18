@@ -1,5 +1,5 @@
 // include/clubhub/Student.h
-// SPDX-License-Identifier: TODO (Task 3)
+// SPDX-License-Identifier: MIT
 #pragma once
 
 #include <optional>
@@ -24,12 +24,12 @@ public:
     bool remindersByEmail() const noexcept { return remindByEmail_; }
 
     // Consent is explicit, separate and can be withdrawn.
-    void giveSmsConsent(std::string phone);   // TODO: digits, '+', ' '
-    void withdrawSmsConsent() noexcept;       // TODO: erase the number
+    void giveSmsConsent(std::string phone);   // digits, '+', ' '
+    void withdrawSmsConsent() noexcept;       // erase the number
     void setEmailReminders(bool on) noexcept { remindByEmail_ = on; }
 
     // Safe for logs: "Student{id=e2******7}", nothing else.
-    std::string redacted() const;             // TODO
+    std::string redacted() const;
 
 private:
     std::string id_;
@@ -37,10 +37,9 @@ private:
     std::string email_;
     std::optional<std::string> phone_;        // only with SMS consent
     bool remindByEmail_ = false;              // opt-in: off by default
-    // TODO: add a member ONLY if it has a Keep row in the inventory
 };
 
 // "e20990417" -> "e2******7"; 3 characters or fewer -> all '*'
-std::string maskId(std::string_view id);      // TODO
+std::string maskId(std::string_view id);
 
 }  // namespace clubhub
