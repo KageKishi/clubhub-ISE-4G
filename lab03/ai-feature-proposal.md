@@ -1,13 +1,13 @@
 # AI feature proposal: "Recommended for you"
-Version 0.1 · 2026-MM-DD · Authors: <names>
+Version 0.1 · 2026-MM-DD · Authors: Song Vansak
 
 ## 1 Problem and non-personalised baseline
 ## 2 Data needed
 | Field | Source | In inventory? | New purpose / consent? | Minimisation |
-|-------|--------|---------------|------------------------|--------------|
+| ----- | ------ | ------------- | ---------------------- | ------------ |
 ## 3 Bias risks
 | Risk | Who is harmed | Mitigation | Fairness check (metric, threshold) |
-|------|---------------|------------|------------------------------------|
+| ---- | ------------- | ---------- | ---------------------------------- |
 ## 4 Transparency
 ### Example: "Why am I seeing this?"
 
