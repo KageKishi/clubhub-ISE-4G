@@ -1,5 +1,5 @@
 # AI feature proposal: "Recommended for you"
-Version 0.1 · 2026-MM-DD · Authors: Song Vansak
+Version 0.1 · 2026-MM-DD · Authors: Sreu Visal
 
 ## 1 Problem and non-personalised baseline
 ## 2 Data needed
