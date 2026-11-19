@@ -12,14 +12,14 @@
 
 ## Task status
 
-| Task                                 | Status           | Deliverables                                                                                                                                                     |
-| ------------------------------------ | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1 · Data inventory                   | Complete         | Data fields, purposes, access, retention, minimisation decisions and personal-data copy rules.                                                                   |
-| 2 · Privacy implementation           | Complete         | Privacy notice, consent flow, retention rules, `Student` helper and privacy tests.                                                                               |
-| 3 · Licence and notices              | Complete         | MIT project licence, SPDX headers and third-party notices.                                                                                                       |
-| 4 · Accessibility and console output | Complete         | WCAG checklist, CLI output rules, `ConsoleOutput` helper and tests.                                                                                              |
-| 5 · Ethics cases and change record   | Complete locally | Seven-step analyses for both cases, unsent message drafts and two GitHub issue drafts. Posting the issues and publishing the PR remain subject to user approval. |
-| Optional · AI recommender challenge  | Complete         | The optional challenge was not attempted. The existing proposal file is inventoried below for completeness.                                                      |
+| Task                                 | Status   | Deliverables                                                                                                                                                     |
+| ------------------------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1 · Data inventory                   | Complete | Data fields, purposes, access, retention, minimisation decisions and personal-data copy rules.                                                                   |
+| 2 · Privacy implementation           | Complete | Privacy notice, consent flow, retention rules, `Student` helper and privacy tests.                                                                               |
+| 3 · Licence and notices              | Complete | MIT project licence, SPDX headers and third-party notices.                                                                                                       |
+| 4 · Accessibility and console output | Complete | WCAG checklist, CLI output rules, `ConsoleOutput` helper and tests.                                                                                              |
+| 5 · Ethics cases and change record   | Complete | Seven-step analyses for both cases, unsent message drafts and two GitHub issue drafts. Posting the issues and publishing the PR remain subject to user approval. |
+| Optional · AI recommender challenge  | Complete | The optional challenge was not attempted. The existing proposal file is inventoried below for completeness.                                                      |
 
 ## Lab 03 file inventory
 
