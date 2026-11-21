@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2026 Team Mekong, ITC Club Hub contributors
+// Copyright (c) 2026 clubhub-ISE-4G, ITC Club Hub contributors
 #include "clubhub/Student.h"
 
 #include <gtest/gtest.h>

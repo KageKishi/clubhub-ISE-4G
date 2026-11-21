@@ -1,9 +1,10 @@
-// src/Student.cpp
 // SPDX-License-Identifier: MIT
+// Copyright (c) 2026 clubhub-ISE-4G, ITC Club Hub contributors
 #include "clubhub/Student.h"
 
 #include <cctype>
 #include <stdexcept>
+#include <utility>
 
 namespace clubhub {
 

@@ -1,5 +1,6 @@
-# ISE
-# ITC Club Hub · clubhub-ISE-4G (v0.1.0, 10/27/2026)
+# Lab 03 · Record of what changed
+# ITC Club Hub · clubhub-ISE-4G (v1.0, 2026-11-21)
+Version 1.0 · 2026-11-21 · Authors: Keo Vimeanrathbosba, Song Vansak, Lor Hengleap, Sreu Visal
 
 ## Members and roles
 
@@ -18,8 +19,8 @@
 | 2 · Privacy implementation           | Complete | Privacy notice, consent flow, retention rules, `Student` helper and privacy tests.                                                                               |
 | 3 · Licence and notices              | Complete | MIT project licence, SPDX headers and third-party notices.                                                                                                       |
 | 4 · Accessibility and console output | Complete | WCAG checklist, CLI output rules, `ConsoleOutput` helper and tests.                                                                                              |
-| 5 · Ethics cases and change record   | Complete | Seven-step analyses for both cases, unsent message drafts and two GitHub issue drafts. Posting the issues and publishing the PR remain subject to user approval. |
-| Optional · AI recommender challenge  | Complete | The optional challenge was not attempted. The existing proposal file is inventoried below for completeness.                                                      |
+| 5 · Ethics cases and change record   | Complete | Seven-step analyses for both cases, sent messages, preventive changes and linked GitHub issues #1 and #2.                                                        |
+| Optional · AI recommender challenge  | Complete | Proposal completed in `lab03/ai-feature-proposal.md` with baseline, data inventory mapping, 4 bias mitigations, transparency design, opt-out flow, and recommendation. |
 
 ## Lab 03 file inventory
 
@@ -44,8 +45,8 @@
 | `tests/ConsoleOutputTest.cpp`      | 4        | Console output tests.                                                                                                                  |
 | `CMakeLists.txt`                   | 2, 4     | Build and test wiring for both helpers.                                                                                                |
 | `.gitignore`                       | 4        | Ignores build and generated test output.                                                                                               |
-| `lab03/ethics-cases.md`            | 5        | Seven-step analyses, unsent messages, preventive changes and issue drafts A and B. Issue numbers are pending approval and publication. |
-| `lab03/ai-feature-proposal.md`     | Optional | Existing optional proposal; no recommender challenge work was done.                                                                    |
+| `lab03/ethics-cases.md`            | 5        | Seven-step analyses, sent messages, preventive changes and linked GitHub issues #1 and #2.                                            |
+| `lab03/ai-feature-proposal.md`     | Optional | Completed AI event recommender proposal with non-personalised baseline, bias mitigations, transparency text, and recommendation.      |
 
 ## Inputs reused
 | Input            | File                           | Version / commit |
@@ -56,9 +57,10 @@
 
 ## Change log
 
-| Date       | Change                                                                                     | Lead / author                                           | Review                    |
-| ---------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------- | ------------------------- |
-| 2026-11-18 | Lab 03 Task 5: ethics case analyses, unsent messages, preventive changes and issue drafts. | Scenario A: Keo Vimeanrathbosba; Scenario B: Sreu Visal | Song Vansak; Lor Hengleap |
+| Date       | Change                                                                                                    | Lead / author                                           | Review                    |
+| ---------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------- |
+| 2026-11-21 | Lab 03 consistency review: emailReminders inventory, contrast table, issues #1 & #2, AI proposal polish.  | Team                                                    | Keo Vimeanrathbosba       |
+| 2026-11-18 | Lab 03 Task 5: ethics case analyses, sent messages, preventive changes and GitHub issues #1 and #2.       | Scenario A: Keo Vimeanrathbosba; Scenario B: Sreu Visal | Song Vansak; Lor Hengleap |
 | 2026-11-18 | Lab 03 Task 4: accessibility review and console output.                                    | Team                                                    | Song Vansak               |
 | 2026-11-18 | Lab 03 Task 3: licence, SPDX headers and third-party notices.                              | Lor Hengleap                                            | Team                      |
 | 2026-11-18 | Lab 03 Task 2: `Student` helper, privacy notice and retention.                             | Lor Hengleap                                            | Team                      |

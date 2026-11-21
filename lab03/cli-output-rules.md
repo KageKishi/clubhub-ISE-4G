@@ -60,22 +60,24 @@ Next step: clubhub waitlist E-017
 
 ## 5. Return a non-zero exit code when a command fails
 
-Bad:
+Bad (POSIX / bash shell):
 ```text
 $ clubhub register E-017
 Error: cannot register: the event is full.
-$ echo %ERRORLEVEL%
+$ echo $?
 0
 ```
 
-Good:
+Good (POSIX / bash shell):
 ```text
 $ clubhub register E-017
 Error: cannot register: the event is full.
 Next step: clubhub waitlist E-017
-$ echo %ERRORLEVEL%
+$ echo $?
 1
 ```
+
+*(On Windows Command Prompt `cmd.exe`, check with `echo %ERRORLEVEL%`, which similarly outputs `1` on error and `0` on success).*
 
 ## 6. State the expected format in every prompt
 

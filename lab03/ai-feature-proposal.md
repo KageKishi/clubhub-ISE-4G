@@ -1,5 +1,5 @@
 # AI feature proposal: "Recommended for you"
-Version 0.1 · 2026-11-18 · Authors: <Keo Vimeanrathbosba>
+Version 0.2 · 2026-11-21 · Authors: Keo Vimeanrathbosba
 
 ## 1 Problem and non-personalised baseline
 The User problem
@@ -12,14 +12,20 @@ Before introducing machine learning or behavioral tracking, we establish a robus
 
 "Events of My Clubs": Displays upcoming events exclusively from clubs where the student is an official registered member.
 
-Why this matters: This baseline solves 60% of the discovery problem (trending campus life and enrolled club updates) instantly, predictably, and transparently without collecting behavioral history or creating personal recommendation profiles. Any proposed AI feature must justify its added complexity over this baseline.
+Why this matters: This baseline is assumed to resolve the majority of discovery needs (trending campus life and enrolled club updates) instantly, predictably, and transparently without collecting behavioral history or creating personal recommendation profiles. Any proposed AI feature must justify its added complexity over this baseline.
+
 ## 2 Data needed
 | Field                   | Source          | In inventory? | New purpose / consent? | Minimisation |
 | ----------------------- | --------------- | ------------- | ---------------------- | ------------ |
 | Event ID / Title / Date | Events Table    | Yes           | No (Core feature)      | None         |
 | Club ID / Category      | Club Table      | Yes           | No (Core feature)      | None         |
-| User Attendance History | Attendance Logs | Yes           | Yes (repurposing historical check-ins for preference profiling and collaborative filtering. Requires updated privacy policy consent.).    | Restricted to the past 6 months; older historical logs are anonymised or dropped. |
-| Student Faculty / Major | Student Profiles| Yes           | Yes (used as a cold-start demographic prior for new users.) | Aggregated to faculty level only (Example, "Engineering" instead of exact degree code).      |
+| User Attendance History | Attendance Logs | Yes           | Yes (repurposing historical check-ins for preference profiling and collaborative filtering. Requires updated privacy policy consent.). | Restricted to the past 12 months; older historical logs are anonymised or dropped. |
+| Student Faculty / Major | Student Profiles| Yes           | Yes (used as a cold-start demographic prior for new users.) | Aggregated to faculty level only (e.g., "Engineering" instead of exact degree code). |
+
+### Task 1 decisions that would change
+If the "Recommended for you" feature is approved, two decisions in the Task 1 data inventory must be revised:
+1. **Attendance retention limit:** The Task 1 inventory currently aggregates attendance and purges individual check-in records at the end of each academic semester (~4–5 months). To build personal recommendation profiles across academic terms, individual attendance check-in records for opted-in students would need to be retained for **12 months** before being anonymised or dropped.
+2. **Faculty and year storage:** The Task 1 inventory currently collects faculty and year only via temporary surveys and immediately aggregates it, deleting individual links. To provide a cold-start demographic prior for new students without attendance history, faculty would need to be stored as a persistent field in the student profile (`data/students.csv`) linked to the student account.
 ## 3 Bias risks
 | Risk | Who is harmed | Mitigation | Fairness check (metric, threshold) |
 | ---- | ------------- | ---------- | ---------------------------------- |

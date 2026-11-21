@@ -8,8 +8,12 @@ flowchart LR
     SetEmail --> SmsPrompt
 
     SmsPrompt -- "yes" --> AskPhone["Ask phone number<br/>giveSmsConsent()"]
-    SmsPrompt -- "no" --> AccountCreated["Account created<br/>(All optional declined: works fully)"]
-    AskPhone --> AccountCreated
+    SmsPrompt -- "no" --> SurveyPrompt{"Optional survey:<br/>share faculty and year?<br/>default: no"}
+    AskPhone --> SurveyPrompt
+
+    SurveyPrompt -- "yes" --> SaveSurvey["Save to surveys.csv<br/>(aggregated at year-end)"]
+    SurveyPrompt -- "no" --> AccountCreated["Account created<br/>(All optional declined: works fully)"]
+    SaveSurvey --> AccountCreated
 
     AccountCreated -.->|"Later: withdraw consent"| Settings["Account Settings<br/>(CLI: clubhub settings / Web: /profile)"]
     Settings --> RevokeEmail["Email reminders: off<br/>setEmailReminders(false)"]

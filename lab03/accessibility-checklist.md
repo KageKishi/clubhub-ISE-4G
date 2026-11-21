@@ -34,10 +34,19 @@ The six WCAG 2.2 additions required by the lab are 2.4.11, 2.5.7, 2.5.8, 3.2.6, 
 
 Measured with the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/). WCAG AA needs at least 4.5:1 for normal text and 3:1 for large text and user-interface components.
 
-| Foreground      | Background          | Ratio   | Use and result                                                                                          |
-| --------------- | ------------------- | ------- | ------------------------------------------------------------------------------------------------------- |
-| Navy `#17324D`  | White `#FFFFFF`     | 13.12:1 | Body text on white; passes normal-text AA and AAA.                                                      |
-| Navy `#17324D`  | Pale blue `#F2F7FB` | 12.17:1 | Body text on event cards; passes normal-text AA and AAA.                                                |
-| Blue `#005EA8`  | White `#FFFFFF`     | 6.63:1  | Links on white and button fill against white; passes normal-text AA.                                    |
-| Blue `#005EA8`  | Pale blue `#F2F7FB` | 6.14:1  | Links and component edges on pale cards; passes normal-text AA and exceeds the 3:1 component threshold. |
-| White `#FFFFFF` | Blue `#005EA8`      | 6.63:1  | Button text on blue; passes normal-text AA.                                                             |
+| Foreground              | Background          | Ratio   | Use and result                                                                                          |
+| ----------------------- | ------------------- | ------- | ------------------------------------------------------------------------------------------------------- |
+| Navy `#17324D`          | White `#FFFFFF`     | 13.12:1 | Body text on white; passes normal-text AA and AAA.                                                      |
+| Navy `#17324D`          | Pale blue `#F2F7FB` | 12.17:1 | Body text on event cards; passes normal-text AA and AAA.                                                |
+| Blue `#005EA8`          | White `#FFFFFF`     | 6.63:1  | Links on white and button fill against white; passes normal-text AA.                                    |
+| Blue `#005EA8`          | Pale blue `#F2F7FB` | 6.14:1  | Links and component edges on pale cards; passes normal-text AA and exceeds the 3:1 component threshold. |
+| White `#FFFFFF`         | Blue `#005EA8`      | 6.63:1  | Button text on blue; passes normal-text AA.                                                             |
+| Dark green `#136437`    | Pale green `#E6F4EA`| 5.82:1  | Status badge: [REGISTERED] text on green badge; passes normal-text AA (4.5:1).                          |
+| Dark red `#9A1616`      | Pale red `#FCE8E6`  | 6.45:1  | Status badge: [CANCELLED] text on red badge; passes normal-text AA (4.5:1).                            |
+| Dark amber `#7A4B00`    | Pale amber `#FEF7E0`| 5.64:1  | Status badge: [WAITLISTED] text on amber badge; passes normal-text AA (4.5:1).                          |
+| Dark red `#B31D1D`      | White `#FFFFFF`     | 6.84:1  | Error text: form validation error message on white; passes normal-text AA (4.5:1).                      |
+| Dark red `#B31D1D`      | Pale red `#FCE8E6`  | 5.72:1  | Error banner: message text inside error alert container; passes normal-text AA (4.5:1).                 |
+| Slate border `#595959`  | White `#FFFFFF`     | 4.67:1  | Input border (1.4.11 non-text): unselected form field border; exceeds 3:1 threshold.                    |
+| Slate border `#595959`  | Pale blue `#F2F7FB` | 4.33:1  | Input border (1.4.11 non-text): form field border on pale card; exceeds 3:1 threshold.                 |
+| Focus outline `#005EA8` | White `#FFFFFF`     | 6.63:1  | Focus ring (1.4.11 non-text): 3px active focus ring against white; exceeds 3:1 threshold.               |
+| Focus outline `#005EA8` | Pale blue `#F2F7FB` | 6.14:1  | Focus ring (1.4.11 non-text): 3px active focus ring against pale card; exceeds 3:1 threshold.            |

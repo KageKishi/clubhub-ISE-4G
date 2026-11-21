@@ -1,5 +1,5 @@
-// include/clubhub/Student.h
 // SPDX-License-Identifier: MIT
+// Copyright (c) 2026 clubhub-ISE-4G, ITC Club Hub contributors
 #pragma once
 
 #include <optional>
@@ -39,7 +39,6 @@ private:
     bool remindByEmail_ = false;              // opt-in: off by default
 };
 
-// "e20990417" -> "e2******7"; 3 characters or fewer -> all '*'
 std::string maskId(std::string_view id);
 
 }  // namespace clubhub
